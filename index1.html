@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<title>STREET APP</title>
+</head>
+<body>
+<!-- Part 1: Nav-->
+<nav class="navbar navbar-default" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="assets/img/streetapp_logo_small-01.png" class="logotipo"></a>
+  </div>
+ 
+  <!-- Enlaces de navegación -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="index1.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Inicio</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Inbox</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Notificaciones</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Blog</a></li>
+    </ul>
+ 
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control text-center" placeholder= "Buscar fotos, locación o personas">
+      </div>
+    </form>
+ 
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="perfil.html">Mi Perfil</a></li>	
+          <li class="divider"></li>
+          <li><a href="#">Editar Perfil</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+      </li>
+      <li class="active" data-toggle="modal" data-target="#uppload"><a href="#"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Fin Part 1: Nav-->
+<!-- Inicio contenido -->
+<div class="container-fluid">
+	<section id="content">
+		<div class="row">
+			<!-- Section Hide -->
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2
+						col-xs-12 backgraund-content" id="perfile-hide" style="display: none;"> <!-- inicio backgraund-content -->
+				<div class="col-md-12 col-xs-12" id="usuario">
+					<div class="col-md-1 col-xs-2">
+						<a href="perfil.html"><img src="assets/img/usuario2.jpg" class="user"></a>
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<h4>Pabla Bazán</h4>
+						<p>Chilena</p>
+					</div>
+					<div class="col-md-offset-5 col-md-2 text-right
+								col-xs-4">
+						<button type="Follow" class="btn btn-default btn-follow">Editar</button>
+					</div>					
+				</div>
+				<div class="col-md-12
+							col-xs-12 text-center" id="new-image">
+					<!-- Div vacio para poner imagen al dar click en boton Cargar imagen -->
+				</div>
+				<div class="col-md-11 col-xs-10 text-right" id="interaction">
+					<button type="Msj" class="btn btn-default" id="btn-msj"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+					<button type="Map" class="btn btn-default" data-toggle="modal" data-target="#map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
+					<button type="Recomend" class="btn btn-default" id="btn-star"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-md-1 col-xs-2 text-center"
+					 id="contador">
+					<!-- Div vacio -->
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment">
+					<h5>Hippie Pink. Bosque de Chapultepec - Chapultepec. México.</h5>
+					<hr>
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment-new">
+					<div id="cont">
+					<!-- contenedor coment. vacio en un principio -->
+					</div> 
+					<div class="form-group inputmsjgroup">
+					   	<label for="writemsj" id="labelbtn"></label>
+					    	<input type="msj" class="form-control" id="comment-cont" placeholder="Agregar un comentario">
+					</div> <!-- cierre inputmsjgroup -->
+				</div>
+			</div> <!-- cierre backgraund-content -->	
+			<!-- Fin section Hide -->
+
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2
+						col-xs-12 backgraund-content"> <!-- inicio backgraund-content -->
+				<div class="col-md-12 col-xs-12" id="usuario">
+					<div class="col-md-1 col-xs-2">
+						<a href="perfilAmigo.html"><img src="assets/img/usuario1.jpg" class="user" id="userAngelica"></a>
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<h4>Angelica Ordenes</h4>
+						<p>Chilena</p>
+					</div>
+					<div class="col-md-offset-5 col-md-2 text-right
+								col-xs-4">
+						<button type="Follow" class="btn btn-default btn-follow">Follow</button>
+					</div>					
+				</div>
+				<div class="col-md-12
+							col-xs-12 text-center" id="photo">
+					<img src="assets/img/imagen1.jpg" class="photo-art-model">
+				</div>
+				<div class="col-md-11 col-xs-10 text-right" id="interaction">
+					<button type="Msj" class="btn btn-default" id="btn-msj1"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+					<button type="Map" class="btn btn-default" data-toggle="modal" data-target="#map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
+					<button type="Recomend" class="btn btn-default" id="btn-star1"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-md-1 col-xs-2 text-center"
+					 id="contador1">
+					<!-- Div vacio -->
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment">
+					<h5>Mural de Chu-Doma. Bosque de Chapultepec - Chapultepec. México.</h5>
+					<hr>
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment-new">
+					<div id="cont1">
+					<!-- contenedor coment. vacio en un principio -->
+					</div> 
+					<div class="form-group inputmsjgroup">
+					   	<label for="writemsj" id="labelbtn"></label>
+					    	<input type="msj" class="form-control" id="comment-cont1" placeholder="Agregar un comentario">
+					</div> <!-- cierre inputmsjgroup -->
+				</div>
+			</div> <!-- cierre backgraund-content -->
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2
+						col-xs-12 backgraund-content"> <!-- inicio backgraund-content -->
+				<div class="col-md-12 col-xs-12" id="usuario">
+					<div class="col-md-1 col-xs-2">
+						<img src="assets/img/usuario3.jpg" class="user">
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<h4>Nadia Rojas</h4>
+						<p>Argentina</p>
+					</div>
+					<div class="col-md-offset-5 col-md-2 text-right
+								col-xs-4">
+						<button type="Follow" class="btn btn-default btn-follow">Friend</button>
+					</div>					
+				</div>
+				<div class="col-md-12
+							col-xs-12 text-center" id="photo">
+					<img src="assets/img/imagen2.jpg" class="photo-art-model">
+				</div>
+				<div class="col-md-11 col-xs-10 text-right" id="interaction">
+					<button type="Msj" class="btn btn-default" id="btn-msj2"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+					<button type="Map" class="btn btn-default" data-toggle="modal" data-target="#map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
+					<button type="Recomend" class="btn btn-default" id="btn-star2"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-md-1 col-xs-2 text-center"
+					 id="contador2">
+					<!-- Div vacio -->
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment">
+					<h5>El Tono - Chu-Doma. Buenos Aires- Argentina.</h5>
+					<hr>
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment-new">
+					<div id="cont2">
+					<!-- contenedor coment. vacio en un principio -->
+					</div> 
+					<div class="form-group inputmsjgroup">
+					   	<label for="writemsj" id="labelbtn"></label>
+					    	<input type="msj" class="form-control" id="comment-cont2" placeholder="Agregar un comentario">
+					</div> <!-- cierre inputmsjgroup -->
+				</div>
+			</div> 
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2
+						col-xs-12 backgraund-content"> <!-- inicio backgraund-content -->
+				<div class="col-md-12 col-xs-12" id="usuario">
+					<div class="col-md-1 col-xs-2">
+						<img src="assets/img/usuario4.jpg" class="user">
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<h4>Vicente Camu</h4>
+						<p>Español</p>
+					</div>
+					<div class="col-md-offset-5 col-md-2 text-right
+								col-xs-4">
+						<button type="Follow" class="btn btn-default btn-follow">Friend</button>
+					</div>					
+				</div>
+				<div class="col-md-12
+							col-xs-12 text-center" id="photo">
+					<img src="assets/img/imagen3.jpg" class="photo-art-model">
+				</div>
+				<div class="col-md-11 col-xs-10 text-right" id="interaction">
+					<button type="Msj" class="btn btn-default" id="btn-msj3"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+					<button type="Map" class="btn btn-default" data-toggle="modal" data-target="#map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
+					<button type="Recomend" class="btn btn-default" id="btn-star3"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-md-1 col-xs-2 text-center"
+					 id="contador3">
+					<!-- Div vacio -->
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment">
+					<h5>Artista: Mazuprozak en el Skate Park de Barcelona.</h5>
+					<hr>
+				</div>
+				<div class="col-md-12 col-xs-12" id="comment-new">
+					<div id="cont3">
+					<!-- contenedor coment. vacio en un principio -->
+					</div> 
+					<div class="form-group inputmsjgroup">
+					   	<label for="writemsj" id="labelbtn"></label>
+					    	<input type="msj" class="form-control" id="comment-cont3" placeholder="Agregar un comentario">
+					</div> <!-- cierre inputmsjgroup -->
+				</div>
+			</div> 
+		</div>
+	</section>
+</div> <!-- cierre container fluid -->
+
+<!-- Modal Mapa-->
+<div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title">STREET ART UBICACIÓN</h5>
+        		<p class="description-ubication">Bosque de Chapultepec. CDMX, Mexico</p>
+        		<p class="description-ubication">31,934 reviews</p>
+      		</div>
+        	<div class="modal-body">
+        	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8362127173955!2d-99.19164984989074!3d19.41948148682735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff574549573f%3A0x42e2e5c1a219c3af!2sBosque+de+Chapultepec!5e0!3m2!1ses-419!2scl!4v1515003527971" width="100%" height="250vh" frameborder="0" style="border:0"  allowfullscreen></iframe>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      		</div>
+   		</div>
+  	</div>
+</div>
+
+<!-- Modal Para Subir Foto-->
+<div class="modal fade" id="uppload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<h5 class="modal-title" id="exampleModalLabel">SUBE TU STREETART</h5>
+        		<p class="description-ubication">Comparte tu descubrimiento</p>
+      		</div>
+      		<div class="modal-body text-center">
+        	<button type="button" class="btn btn-default btn-lg btn-charge-img" id="charge">Selecciona Fotografía</button>
+        	<h5>O arrastra tu foto en cualquier lugar de esta página</h5>
+      		</div>
+     	 	<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        		<button type="button" class="btn btn-default save-img-modal">Save changes</button>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+<!-- Script Files -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>	
+</body>
+</html>
